@@ -82,6 +82,7 @@ export const CONTAINERS = [
      * the existing state.
      */
     StoreModule.forFeature(fromBooks.booksFeatureKey, fromBooks.reducers),
+
     /**
      * Effects.forFeature is used to register effects
      * from feature modules. Effects can be loaded
@@ -93,6 +94,7 @@ export const CONTAINERS = [
     EffectsModule.forFeature([BookEffects, CollectionEffects]),
   ],
   declarations: [COMPONENTS, CONTAINERS],
+  entryComponents: [BooksComponent],
 })
 export class BooksModule implements ModuleWithRoute {
   routeComponent = BooksComponent;
